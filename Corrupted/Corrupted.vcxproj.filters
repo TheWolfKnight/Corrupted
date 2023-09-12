@@ -19,6 +19,18 @@
     <Filter Include="Header Files\Allocators">
       <UniqueIdentifier>{1cfad839-69cb-4cdf-a023-ae3ebcb4c932}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\EventSystem">
+      <UniqueIdentifier>{01bf44a4-3cbc-4a35-a988-c5f87ea79f81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\EventSystem">
+      <UniqueIdentifier>{7fedbe1a-eb03-4d1d-bc31-7858a9bd3d76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Button">
+      <UniqueIdentifier>{a780b136-6f52-40fe-93cc-b86203eb3da9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Button">
+      <UniqueIdentifier>{b373ed22-1d88-4526-9a3b-f395e525cef6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -27,11 +39,23 @@
     <ClCompile Include="InputHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="arena_allocator.cpp">
+    <ClCompile Include="ArenaAllocator.cpp">
       <Filter>Source Files\Allocators</Filter>
     </ClCompile>
-    <ClCompile Include="heap_allocator.cpp">
+    <ClCompile Include="HeapAllocator.cpp">
       <Filter>Source Files\Allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="Layer.cpp">
+      <Filter>Source Files\EventSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -41,11 +65,26 @@
     <ClInclude Include="IAllocator.h">
       <Filter>Header Files\Allocators</Filter>
     </ClInclude>
-    <ClInclude Include="arena_allocator.h">
+    <ClInclude Include="ArenaAllocator.h">
       <Filter>Header Files\Allocators</Filter>
     </ClInclude>
-    <ClInclude Include="heap_allocator.h">
+    <ClInclude Include="HeapAllocator.h">
       <Filter>Header Files\Allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="EventReciver.hpp">
+      <Filter>Header Files\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.hpp">
+      <Filter>Header Files\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.hpp">
+      <Filter>Header Files\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

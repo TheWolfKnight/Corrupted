@@ -1,7 +1,7 @@
 
-#include "heap_allocator.h"
-
 #include <cstdlib>
+
+#include "HeapAllocator.h"
 
 template <typename T>
 T* HeapAllocator::alloc(void) {

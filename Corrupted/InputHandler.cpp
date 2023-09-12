@@ -4,7 +4,7 @@
 
 #include "InputHandler.h"
 
-void InputHandler::change_key_event(char ch, key_event_callback_t e) {
+void InputHandler::change_key_event(char ch, KeyboardEventCallback e) {
     this->m_callbacks[ch] = e;
 }
 

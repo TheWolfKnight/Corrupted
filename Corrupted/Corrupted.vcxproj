@@ -132,16 +132,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="arena_allocator.cpp" />
-    <ClCompile Include="heap_allocator.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="ArenaAllocator.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="HeapAllocator.cpp" />
     <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="Layer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="arena_allocator.h" />
-    <ClInclude Include="heap_allocator.h" />
+    <ClInclude Include="Application.hpp" />
+    <ClInclude Include="ArenaAllocator.h" />
+    <ClInclude Include="Button.hpp" />
+    <ClInclude Include="EventReciver.hpp" />
+    <ClInclude Include="HeapAllocator.h" />
     <ClInclude Include="IAllocator.h" />
     <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="Layer.hpp" />
+    <ClInclude Include="Window.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

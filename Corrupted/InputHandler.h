@@ -1,16 +1,17 @@
 #pragma once
 
+#include <functional>
 #include <SDL.h>
 #include <set>
 
-typedef void (*key_event_callback_t)(SDL_KeyboardEvent *e);
+using KeyboardEventCallback = std::function<void(SDL_KeyboardEvent*)>;
 
 class InputHandler {
 public:
 
-    void change_key_event(char ch, key_event_callback_t e);
+    void change_key_event(char ch, KeyboardEventCallback e);
     bool notify(SDL_KeyboardEvent evnt);
 
 private:
-    key_event_callback_t m_callbacks[255];
+    KeyboardEventCallback m_callbacks[255];
 };
