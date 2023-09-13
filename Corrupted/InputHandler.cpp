@@ -2,7 +2,7 @@
 #include <SDL.h>
 #include <cstring>
 
-#include "InputHandler.h"
+#include "InputHandler.hpp"
 
 void InputHandler::change_key_event(char ch, KeyboardEventCallback e) {
     this->m_callbacks[ch] = e;

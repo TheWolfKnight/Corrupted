@@ -1,12 +1,13 @@
 
 #include <SDL.h>
 #include <cstdlib>
+#include <cstdarg>
 
 #include "EventReciver.hpp"
 #include "Layer.hpp"
 
 bool Layer::handle_event(SDL_Event* event) {
-    for (const auto handler : this->m_subscribers) {
+    for (EventReciver* handler : this->m_subscribers) {
         if (handler->handle_event(event))
             return true;
     }
@@ -14,5 +15,5 @@ bool Layer::handle_event(SDL_Event* event) {
 }
 
 void Layer::subscribe(EventReciver* reciver) {
-    this->m_subscribers.push_back(reciver);
+    m_subscribers.push_back(reciver);
 }

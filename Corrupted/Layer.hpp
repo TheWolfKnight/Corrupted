@@ -3,6 +3,7 @@
 #include <SDL.h>
 #include <vector>
 #include <cstdlib>
+#include <cstdarg>
 
 #include "EventReciver.hpp"
 

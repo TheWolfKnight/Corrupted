@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IAllocator.h"
+#include "IAllocator.hpp"
 
 class HeapAllocator : public IAllocator {
 public:
@@ -9,5 +9,5 @@ public:
     template <typename T>
     T* alloc(void);
 
-    virtual bool dealloc(void* target) = 0;
+    //virtual bool dealloc(void* target) = 0;
 };

@@ -6,16 +6,17 @@
 bool Button::handle_event(SDL_Event* e) {
     if (
         e->type == SDL_MOUSEBUTTONDOWN &&
-        e->button.button == SDL_BUTTON_LEFT
+        e->button.button == SDL_BUTTON_LEFT &&
+        this->m_is_hoverd && this->m_is_active
         )
     {
         if (this->m_button_event != nullptr)
             this->m_button_event(e);
         return true;
     }
-    else if (e->type == SDL_MOUSEMOTION) {
+    else if (e->type == SDL_MOUSEMOTION)
         this->m_is_hoverd = this->is_within_bound(e->motion.x, e->motion.y);
-    }
+    return false;
 }
 
 bool Button::is_within_bound(int mouse_x, int mouse_y) {
@@ -30,7 +31,11 @@ bool Button::is_within_bound(int mouse_x, int mouse_y) {
 }
 
 void Button::update(void) {
-    SDL_Color* color = &(this->m_is_hoverd ? this->m_hover_color : this->m_background_color);
+    this->colors.change_color(this->m_is_hoverd);
+}
+
+void Button::show(void) {
+    SDL_Color* color = this->colors.current_color;
 
     SDL_FillRect(
         this->m_surface,

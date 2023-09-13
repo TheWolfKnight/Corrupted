@@ -25,11 +25,23 @@
     <Filter Include="Header Files\EventSystem">
       <UniqueIdentifier>{7fedbe1a-eb03-4d1d-bc31-7858a9bd3d76}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Button">
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{78c87101-489f-4334-bde1-1812976f93cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI\Button">
       <UniqueIdentifier>{a780b136-6f52-40fe-93cc-b86203eb3da9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Button">
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{76046b3a-c444-4cb5-a422-75034ffce71a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Button">
       <UniqueIdentifier>{b373ed22-1d88-4526-9a3b-f395e525cef6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI\ItemFrame">
+      <UniqueIdentifier>{15243d36-5a4f-48d6-9b4f-fdbd05722180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\ItemFrame">
+      <UniqueIdentifier>{15ce1fd4-0ce3-43a6-a998-8d380d11cd82}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -49,7 +61,7 @@
       <Filter>Source Files\EventSystem</Filter>
     </ClCompile>
     <ClCompile Include="Button.cpp">
-      <Filter>Source Files\Button</Filter>
+      <Filter>Source Files\UI\Button</Filter>
     </ClCompile>
     <ClCompile Include="Application.cpp">
       <Filter>Source Files</Filter>
@@ -57,18 +69,24 @@
     <ClCompile Include="Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IUIElement.hpp">
+      <Filter>Header Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemFrame.cpp">
+      <Filter>Source Files\UI\ItemFrame</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="InputHandler.h">
+    <ClInclude Include="InputHandler.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IAllocator.h">
+    <ClInclude Include="IAllocator.hpp">
       <Filter>Header Files\Allocators</Filter>
     </ClInclude>
-    <ClInclude Include="ArenaAllocator.h">
+    <ClInclude Include="ArenaAllocator.hpp">
       <Filter>Header Files\Allocators</Filter>
     </ClInclude>
-    <ClInclude Include="HeapAllocator.h">
+    <ClInclude Include="HeapAllocator.hpp">
       <Filter>Header Files\Allocators</Filter>
     </ClInclude>
     <ClInclude Include="EventReciver.hpp">
@@ -78,13 +96,16 @@
       <Filter>Header Files\EventSystem</Filter>
     </ClInclude>
     <ClInclude Include="Button.hpp">
-      <Filter>Header Files\Button</Filter>
+      <Filter>Header Files\UI\Button</Filter>
     </ClInclude>
     <ClInclude Include="Application.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Window.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemFrame.hpp">
+      <Filter>Header Files\UI\ItemFrame</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

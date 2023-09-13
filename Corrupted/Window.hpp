@@ -4,13 +4,16 @@
 
 class Window {
 public:
-    inline explicit Window(void) {
+    SDL_Rect window_size;
+
+public:
+    inline explicit Window(const char* title, size_t width, size_t height) {
         SDL_Init(SDL_INIT_VIDEO);
 
         this->m_window = SDL_CreateWindow(
-            "SDL_Window",
+            title,
             SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-            480, 640,
+            width, height,
             SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE
         );
 
@@ -23,6 +26,7 @@ public:
     void render_frames(void);
 
     inline ~Window() {
+        free(this->m_surface);
         SDL_DestroyWindow(this->m_window);
         SDL_Quit();
     }

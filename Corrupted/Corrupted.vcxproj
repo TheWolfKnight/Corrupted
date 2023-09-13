@@ -137,18 +137,21 @@
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="HeapAllocator.cpp" />
     <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="ItemFrame.cpp" />
+    <ClCompile Include="IUIElement.hpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.hpp" />
-    <ClInclude Include="ArenaAllocator.h" />
+    <ClInclude Include="ArenaAllocator.hpp" />
     <ClInclude Include="Button.hpp" />
     <ClInclude Include="EventReciver.hpp" />
-    <ClInclude Include="HeapAllocator.h" />
-    <ClInclude Include="IAllocator.h" />
-    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="HeapAllocator.hpp" />
+    <ClInclude Include="IAllocator.hpp" />
+    <ClInclude Include="InputHandler.hpp" />
+    <ClInclude Include="ItemFrame.hpp" />
     <ClInclude Include="Layer.hpp" />
     <ClInclude Include="Window.hpp" />
   </ItemGroup>
