@@ -25,4 +25,22 @@ void Application::update_display(void) {
         elem->update();
         elem->show();
     }
+
+    this->m_window->render_frames();
+}
+
+void Application::add_display_element(IUIElement* elem) {
+
+    this->m_display_elements.push_back(elem);
+
+    EventReciver* reciver = dynamic_cast<EventReciver*>(elem);
+    if (reciver != nullptr)
+        m_ui->subscribe(reciver);
+}
+
+bool Application::handle_event(SDL_Event* e) {
+
+    if (this->m_ui == nullptr) return false;
+
+    return m_ui->handle_event(e);
 }

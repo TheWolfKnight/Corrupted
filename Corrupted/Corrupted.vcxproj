@@ -133,9 +133,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
-    <ClCompile Include="ArenaAllocator.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="HeapAllocator.cpp" />
+    <ClCompile Include="IApplication.hpp" />
+    <ClCompile Include="IBounded.hpp" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="ItemFrame.cpp" />
     <ClCompile Include="IUIElement.hpp" />

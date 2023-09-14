@@ -30,7 +30,6 @@ int main(int argc, char** argv) {
         printf("Hello from event 1\n");
     });
 
-    Layer UI;
     Button* button1 = new Button(app, 50, 50, 50, 50, 0xFF3232FF, 0x3232FFFF);
     button1->on_button_click([handler](SDL_Event* e) {
         handler->change_key_event('a', [](SDL_KeyboardEvent* ke) {
@@ -45,11 +44,11 @@ int main(int argc, char** argv) {
         });
     });
 
-    ItemFrame frame = ItemFrame(app, 0, 0, 250, 250);
-    frame.add_child(button1);
-    frame.add_child(button2);
+    ItemFrame* frame = new ItemFrame(app, 0, 0, 250, 250);
+    frame->add_child(button1);
+    frame->add_child(button2);
 
-    UI.subscribe(&frame);
+    app->add_display_element(frame);
 
     while (!quit) {
         while (SDL_PollEvent(&e)) {
@@ -58,10 +57,9 @@ int main(int argc, char** argv) {
             }
             else if (e.type == SDL_KEYDOWN)
                 handler->notify(e.key);
-            else UI.handle_event(&e);
+            else app->handle_event(&e);
         }
         app->update_display();
-        window->render_frames();
     }
 
     delete app;

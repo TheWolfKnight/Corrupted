@@ -43,6 +43,9 @@
     <Filter Include="Source Files\UI\ItemFrame">
       <UniqueIdentifier>{15ce1fd4-0ce3-43a6-a998-8d380d11cd82}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Interfaces">
+      <UniqueIdentifier>{2dd67166-3368-4b6c-8006-289fe421d0b7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -50,9 +53,6 @@
     </ClCompile>
     <ClCompile Include="InputHandler.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ArenaAllocator.cpp">
-      <Filter>Source Files\Allocators</Filter>
     </ClCompile>
     <ClCompile Include="HeapAllocator.cpp">
       <Filter>Source Files\Allocators</Filter>
@@ -69,11 +69,17 @@
     <ClCompile Include="Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IUIElement.hpp">
-      <Filter>Header Files\UI</Filter>
-    </ClCompile>
     <ClCompile Include="ItemFrame.cpp">
       <Filter>Source Files\UI\ItemFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="IApplication.hpp">
+      <Filter>Header Files\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="IBounded.hpp">
+      <Filter>Header Files\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="IUIElement.hpp">
+      <Filter>Header Files\Interfaces</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

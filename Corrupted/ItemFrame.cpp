@@ -14,18 +14,16 @@ void ItemFrame::add_child(IUIElement* elem) {
     SDL_Rect bound = elem->get_location();
     bound.x += this->m_bound.x;
     bound.y += this->m_bound.y;
-    elem->set_location(bound);
+    elem->set_location(bound.x, bound.y);
 
-    ChildElement *ch_elem = (ChildElement*)this->m_allocator.alloc<ChildElement>();
+    ChildElement *ch_elem = (ChildElement*)this->m_allocator->alloc<ChildElement>();
 
     // Dont need to show/handle elements out of bound
     if (!this->is_within_bound(&bound)) {
-        ch_elem->should_render = false;
-        elem->deactivate();
+        ch_elem->out_of_frame = true;
     }
 
     ch_elem = new ChildElement(elem);
-
 
     this->m_child_elements.push_back(ch_elem);
 }
@@ -35,14 +33,14 @@ bool ItemFrame::handle_event(SDL_Event* e) {
         return false;
 
     for (ChildElement* child : this->m_child_elements) {
-        IUIElement* elem = child->elem;
+        if (child->out_of_frame) continue;
 
         // NOTE: skip non-active elements
-        if (!elem->is_active()) continue;
+        if (!child->elem->is_active()) continue;
 
         // converts the element to a EventReciver*, this will return
         // nullptr if it is not a EventReciver
-        EventReciver* reciver = dynamic_cast<EventReciver*>(elem);
+        EventReciver* reciver = dynamic_cast<EventReciver*>(child->elem);
 
         // skip non-EventRecivers
         if (reciver == nullptr) continue;
@@ -56,7 +54,7 @@ bool ItemFrame::handle_event(SDL_Event* e) {
 
 void ItemFrame::show(void) {
     for (ChildElement* child : this->m_child_elements) {
-        if (!child->should_render)
+        if (child->out_of_frame)
             continue;
         child->elem->show();
     }
@@ -64,9 +62,10 @@ void ItemFrame::show(void) {
 
 void ItemFrame::update(void) {
     for (ChildElement* child : this->m_child_elements) {
-        if (!child->should_render)
+        if (child->out_of_frame)
             continue;
         child->elem->update();
+        child->out_of_frame = !this->is_within_bound(child->elem->get_bounding_box());
     }
 }
 

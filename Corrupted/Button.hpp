@@ -49,8 +49,6 @@ public:
         this->m_is_active = true;
 
         this->colors = ButtonColorController(bg_color, hover_color);
-
-        app->add_display_element(this);
     }
 
     inline void on_button_click(ButtonEventCallback e) {
@@ -61,6 +59,8 @@ public:
 
     virtual void show(void);
     virtual void update(void);
+
+    inline ~Button() {}
 
 private:
     bool m_is_hoverd{ false };

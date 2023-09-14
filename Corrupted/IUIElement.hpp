@@ -2,7 +2,9 @@
 
 #include <SDL.h>
 
-class IUIElement {
+#include "IBounded.hpp"
+
+class IUIElement : public IBounded {
 public:
     /*
         Runs the render functions for the element
@@ -22,7 +24,10 @@ public:
     /*
         Sets the bounding box of the UI element
     */
-    virtual void set_location(SDL_Rect bound) { this->m_bound = bound; }
+    virtual void set_location(int x, int y) {
+        this->m_bound.x = x;
+        this->m_bound.y = y;
+    }
 
     /*
         Tells the caller if the UI element is active
@@ -41,5 +46,4 @@ public:
 
 protected:
     bool m_is_active{ true };
-    SDL_Rect m_bound;
 };
