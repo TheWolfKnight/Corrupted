@@ -8,7 +8,6 @@
 
 #include "Layer.hpp"
 #include "Button.hpp"
-#include "ItemFrame.hpp"
 
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
@@ -44,11 +43,8 @@ int main(int argc, char** argv) {
         });
     });
 
-    ItemFrame* frame = new ItemFrame(app, 0, 0, 250, 250);
-    frame->add_child(button1);
-    frame->add_child(button2);
-
-    app->add_display_element(frame);
+    app->add_display_element(button1);
+    app->add_display_element(button2);
 
     while (!quit) {
         while (SDL_PollEvent(&e)) {

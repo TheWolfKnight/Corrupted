@@ -37,12 +37,6 @@
     <Filter Include="Source Files\UI\Button">
       <UniqueIdentifier>{b373ed22-1d88-4526-9a3b-f395e525cef6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\UI\ItemFrame">
-      <UniqueIdentifier>{15243d36-5a4f-48d6-9b4f-fdbd05722180}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\UI\ItemFrame">
-      <UniqueIdentifier>{15ce1fd4-0ce3-43a6-a998-8d380d11cd82}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Interfaces">
       <UniqueIdentifier>{2dd67166-3368-4b6c-8006-289fe421d0b7}</UniqueIdentifier>
     </Filter>
@@ -69,9 +63,6 @@
     <ClCompile Include="Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ItemFrame.cpp">
-      <Filter>Source Files\UI\ItemFrame</Filter>
-    </ClCompile>
     <ClCompile Include="IApplication.hpp">
       <Filter>Header Files\Interfaces</Filter>
     </ClCompile>
@@ -80,6 +71,9 @@
     </ClCompile>
     <ClCompile Include="IUIElement.hpp">
       <Filter>Header Files\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Convertor.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -101,7 +95,7 @@
     <ClInclude Include="Layer.hpp">
       <Filter>Header Files\EventSystem</Filter>
     </ClInclude>
-    <ClInclude Include="Button.hpp">
+    <ClInclude Include="IButton.hpp">
       <Filter>Header Files\UI\Button</Filter>
     </ClInclude>
     <ClInclude Include="Application.hpp">
@@ -110,8 +104,11 @@
     <ClInclude Include="Window.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ItemFrame.hpp">
-      <Filter>Header Files\UI\ItemFrame</Filter>
+    <ClInclude Include="Button.hpp">
+      <Filter>Header Files\UI\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="Convertor.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
