@@ -12,10 +12,18 @@ public:
     inline explicit Layer(IApplication* app) {
         this->m_parent = app;
         this->m_max_orginization_depth = 5;
+        this->m_max_element_count = 20;
     }
 
     inline explicit Layer(IApplication* app, unsigned int max_orginization_depth) {
+        this->m_max_element_count = 20;
         this->m_max_orginization_depth = max_orginization_depth;
+        this->m_parent = app;
+    }
+
+    inline explicit Layer(IApplication* app, unsigned int max_orginization_depth, unsigned int element_count) {
+        this->m_max_orginization_depth = max_orginization_depth;
+        this->m_max_element_count = element_count;
         this->m_parent = app;
     }
 
@@ -27,6 +35,7 @@ public:
     }
 
 private:
+    unsigned int m_max_element_count;
     unsigned int m_max_orginization_depth;
 
     IApplication* m_parent{ nullptr };

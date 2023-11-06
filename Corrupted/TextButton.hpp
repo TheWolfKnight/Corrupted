@@ -1,18 +1,24 @@
 #pragma once
 
+#include <SDL.h>
+#include <string>
+
 #include "IButton.hpp"
-#include "IUIElement.hpp"
 #include "IApplication.hpp"
 
-class Button : public IButton {
+class TextButton : public IButton {
+public:
+    std::string text;
+    SDL_Color bg_color, hover_color;
+
 public:
 
-    inline explicit Button(IApplication *app,
+    inline explicit TextButton(IApplication* app,
         int x, int y,
         int w, int h,
-        uint32_t bg_color,
-        uint32_t hover_color) {
-
+        std::string& text,
+        uint32_t bg_color, uint32_t hover_color)
+    {
         this->m_bound = { x, y, w, h };
         this->m_surface = app->get_window_surface();
         this->m_app = app;
@@ -32,6 +38,7 @@ public:
     void update(void);
 
 private:
+
     bool m_is_hoverd{ false };
 
     ButtonColorController colors{};
@@ -43,4 +50,6 @@ private:
 
 private:
     bool is_within_bound(int mouse_x, int mouse_y);
+
 };
+

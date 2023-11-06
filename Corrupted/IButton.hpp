@@ -36,13 +36,10 @@ struct ButtonColorController {
 
 class IButton : public EventReciver, public IUIElement {
 public:
-
-
     virtual bool handle_event(SDL_Event* e) = 0;
 
     virtual void show(void) = 0;
     virtual void update(void) = 0;
 
     inline ~IButton() {}
-
 };

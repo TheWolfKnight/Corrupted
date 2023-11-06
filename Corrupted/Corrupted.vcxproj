@@ -144,6 +144,7 @@
     <ClCompile Include="IUIElement.hpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TextButton.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -156,7 +157,9 @@
     <ClInclude Include="IAllocator.hpp" />
     <ClInclude Include="Convertor.hpp" />
     <ClInclude Include="InputHandler.hpp" />
+    <ClInclude Include="IWindow.hpp" />
     <ClInclude Include="Layer.hpp" />
+    <ClInclude Include="TextButton.hpp" />
     <ClInclude Include="Window.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

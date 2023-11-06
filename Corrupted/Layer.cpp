@@ -7,8 +7,6 @@
 #include "EventReciver.hpp"
 #include "Layer.hpp"
 
-#define MAX_LAYER_ELEMENT_COUNT 20
-
 void Layer::orignize(void) {
     throw "Not Implemented";
 }
@@ -22,7 +20,7 @@ bool Layer::handle_event(SDL_Event* event) {
 }
 
 void Layer::subscribe(EventReciver* reciver) {
-    if (this->m_subscribers.size() > MAX_LAYER_ELEMENT_COUNT && !this->m_orginized) {
+    if (this->m_subscribers.size() > 20 && !this->m_orginized) {
         this->orignize();
         this->m_orginized = true;
     }

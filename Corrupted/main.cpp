@@ -5,6 +5,7 @@
 
 #include "Window.hpp"
 #include "InputHandler.hpp"
+#include "IApplication.hpp"
 
 #include "Layer.hpp"
 #include "Button.hpp"
@@ -15,7 +16,7 @@ const int SCREEN_HEIGHT = 480;
 int main(int argc, char** argv) {
 
     Window* window = new Window("Test Window", 640, 480);
-    Application *app = new Application(window);
+    IApplication *app = new Application(window);
 
     SDL_Event e;
     bool quit = false;

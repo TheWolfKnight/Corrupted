@@ -2,14 +2,10 @@
 
 #include <SDL.h>
 
-#include "IBounded.hpp"
+#include "IWindow.hpp"
 
-class Window : public IBounded {
+class Window : public IWindow {
 public:
-    SDL_Rect window_size;
-
-public:
-
     inline explicit Window(const char* title, int width, int height) {
         SDL_Init(SDL_INIT_VIDEO);
 

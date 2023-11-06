@@ -75,6 +75,9 @@
     <ClCompile Include="Convertor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TextButton.cpp">
+      <Filter>Source Files\UI\Button</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InputHandler.hpp">
@@ -95,9 +98,6 @@
     <ClInclude Include="Layer.hpp">
       <Filter>Header Files\EventSystem</Filter>
     </ClInclude>
-    <ClInclude Include="IButton.hpp">
-      <Filter>Header Files\UI\Button</Filter>
-    </ClInclude>
     <ClInclude Include="Application.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -109,6 +109,15 @@
     </ClInclude>
     <ClInclude Include="Convertor.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IButton.hpp">
+      <Filter>Header Files\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IWindow.hpp">
+      <Filter>Header Files\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="TextButton.hpp">
+      <Filter>Header Files\UI\Button</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
